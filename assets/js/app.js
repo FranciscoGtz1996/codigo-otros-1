@@ -1,10 +1,12 @@
+
+
 const baseEndpoint = 'https://api.github.com';
 const usersEndpoint = `${baseEndpoint}/users`;
 const $n = document.querySelector('name');
 const $b = document.querySelector('#blog');
 const $l = document.querySelector('.location');
 
-function displayUser(username) {
+async function displayUser(username) { /* Agregue la palabra async function, para que fuera función promesa*/
   $n.textContent = 'cargando...';
   const response = await fetch(`${usersEndpoint}/${username}`);
   console.log(data);
